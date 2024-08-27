@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <div id="map-container"></div>
+        <div id="itinerary">
+            <div id="itinerary-header">
+                <div id="undo-redo-settings-container">
+                    <div id="undo-redo-container">
+                        <button id="undo-btn" disabled><i class="fas fa-undo"></i></button>
+                        <button id="redo-btn" disabled><i class="fas fa-redo"></i></button>
+                    </div>
+                    <button id="settings-btn"><i class="fas fa-cog"></i></button>
+                </div>
+                <div id="add-destination">
+                    <input type="text" id="destination-input" placeholder="Enter a destination">
+                    <button id="add-btn">Add</button>
+                </div>
+            </div>
+            <div id="destination-list-container">
+                <div id="destination-list"></div>
+            </div>
+            <div id="itinerary-footer">
+                <div id="route-info">
+                    <div class="route-info-item">
+                        <i class="fas fa-road"></i>
+                        <span id="total-distance">N/A</span>
+                    </div>
+                    <div class="route-info-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="total-duration">N/A</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
